@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block style %}
+<style>
+    #videoContainer{
+        text-align: center;
+    }
+
+    #videoElement{
+        width: 50%;
+        height: 50%;
+    }
+</style>
+{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+<h2 id="index_h2" name="index_h2">Welcome to Home Page of Smart Mango Harvesting!</h2><br>
+
+<small><b>Note: </b>The camera may take few moments to close after use.</small><br><br>
+
+<button class="btn btn-primary" onclick="camera_player(0)" id="play_stop_btn">Play</button>
+<button class="btn btn-primary" onclick="camera_player(1)" id="close_video_btn" style="display: none;">Close</button><br><br>
+
+<div id="videoContainer" name="videoContainer">
+    <video id="videoElement" name="videoElement" autoplay="true" controls></video>
+</div><br><br>
+
+<!--
+<div class="row">
+    <div class="col-6">
+        <img src="{{media_url}}images/sample_image.png" alt="Sample Image">
+    </div>
+    <div class="col-6" style="text-align: center; vertical-align: middle;">
+        <p style="border: 2px solid rebeccapurple;"><b>Text from model.txt: </b>{{read_text}}</p>
+    </div>
+</div>
+-->
+
+<script>
+    function camera_player(request_status){
+        var initial_camera_status = -1;
+        let video = document.querySelector("#videoElement");
+        if (navigator.mediaDevices.getUserMedia){
+            navigator.mediaDevices.getUserMedia({video: true})
+                .then(function (stream){
+                    console.log("Video Camera Accessed: " + video + "\nVideo Source object: " + video.srcObject);
+
+                    var play_stop_btn = document.getElementById("play_stop_btn");
+                    var close_video_btn = document.getElementById("close_video_btn");
+
+                    // request_status==0; play/pause video
+                    // request_status==1; close the camera
+
+                    if (request_status == 0){
+                        video.style.display = "inline-block";
+                        close_video_btn.style.display = "inline-block";
+                        if (play_stop_btn.innerText == "Play"){
+                            video.srcObject = stream;
+                            video.play();
+                            console.log("Video playing...");
+                            play_stop_btn.innerText = "Pause";
+                        }
+                        else if (play_stop_btn.innerText == "Pause"){
+                            video.pause();
+                            console.log("Video paused.");
+                            play_stop_btn.innerText = "Play";
+                        }
+                    }
+                    else if (request_status == 1){
+                        video.pause();
+                        const tracks = stream.getTracks();
+                        tracks.forEach((track) => {
+                            track.stop();
+                        });
+                        video.srcObject = null;
+                        video.style.display = "none";
+                        close_video_btn.style.display = "none";
+                        play_stop_btn.innerText = "Play";
+                        console.log("Video has been stopped with Stream: " + stream);
+                    }
+                })
+                .catch(function (error){
+                    console.log("Error! Error Message: " + error);
+                })
+        } else{
+            console.log("getUserMedia not supported!")
+        }
+    }
+
+    function hide_or_display(element_id) {
+        var x = document.getElementById(element_id);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+{% endblock body %}
