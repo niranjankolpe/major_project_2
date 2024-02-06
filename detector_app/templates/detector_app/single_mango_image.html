@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block style %}
+<style>
+    a{
+        display: block;
+    }
+</style>
+{% endblock style %}
+
+{% block script %}{% endblock script %}
+
+{% block body %}
+
+<form action="image_classify" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" id="mango_chi_image" name="mango_chi_image" accept=".jpg, .png" required><br>
+    <p>Click the button to upload a mango image for classification. Accepted formats: .jpg, .png</p><br><br>
+    <input class="btn btn-primary" type="submit" value="Submit"><br>
+</form>
+
+{% endblock body %}

@@ -20,7 +20,7 @@
 {% block body %}
 <h2 id="index_h2" name="index_h2">Welcome to Home Page of Smart Mango Harvesting!</h2><br>
 
-<small><b>Note: </b>The camera may take few moments to close after use.</small><br><br>
+{% comment %} <small><b>Note: </b>The camera may take few moments to close after use.</small><br><br>
 
 <button class="btn btn-primary" onclick="camera_player(0)" id="play_stop_btn">Play</button>
 <button class="btn btn-primary" onclick="camera_player(1)" id="close_video_btn" style="display: none;">Close</button><br><br>
@@ -37,8 +37,14 @@
     <div class="col-6" style="text-align: center; vertical-align: middle;">
         <p style="border: 2px solid rebeccapurple;"><b>Text from model.txt: </b>{{read_text}}</p>
     </div>
-</div>
+</div> {% endcomment %}
 
+<p>Our platform provides you with two services:
+    1) <a href="detector">Mango Classifier</a>
+    2) <a href="leaf_detector">Leaf Detection</a>
+</p><br>
+
+<a href="detector" class="btn btn-primary">Get Started</a>
 
 <script>
     function camera_player(request_status){

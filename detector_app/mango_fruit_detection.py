@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import torch
 import time
+import datetime
 
 class MangoDetection:
     # Initializing the class
@@ -11,7 +12,7 @@ class MangoDetection:
         self.semi_ripe  = [[25, 211, 127], [30, 255, 255]]
         self.ripe       = [[16, 195, 137], [27, 255, 255]]
         self.kernel = np.ones((5,5))
-        self.model = torch.hub.load('ultralytics/yolov5', 'custom', path="media_files/models/model.pt", force_reload=True)
+        self.model = torch.hub.load('ultralytics/yolov5', 'custom', path="media_files/models/model.pt", force_reload=False)
         self.classes = self.model.names
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print("Using Device: ", self.device)
@@ -50,31 +51,32 @@ class MangoDetection:
                 classification = clsn
                 cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 cv2.putText(frame, self.classes[int(labels[i])]+" "+self.lab[classification], (x1, y1), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+        image_name = str(datetime.datetime.now())
+        print(image_name)
+        cv2.imwrite(f"output_images/{image_name}.png", frame)
         return frame
     
+    def live_detection(self):
+        # Real-time detection
+        camera = cv2.VideoCapture(0)
+        while (True):
+            time.sleep(10)
+            ret, frame = camera.read()
+            frame = cv2.resize(frame, (640, 640))
+            results = self.score_frame(frame)
+            frame = self.plot_boxes(results, frame)
+            cv2.imshow('Mango Detection and Classification', frame)
+            if cv2.waitKey(5) & 0xFF == 27:
+                break
+        camera.release()
+        cv2.destroyAllWindows()
+    
+    def classify_mango_image(self, image):
+        # Testing with sample mango images
+        image = cv2.resize(image, (640, 640))
+        results = self.score_frame(image)
+        image = self.plot_boxes(results, image)
+        return image
+    
     def __call__(self):
-        print("\n\nProcess started...")
-        img1 = cv2.imread("media_files/images/unripe_mango.png")
-        img2 = cv2.imread("media_files/images/semi_ripe_mango.png")
-        img3 = cv2.imread("media_files/images/ripe_mango.png")
-        images = [img1, img2, img3]
-        for i in range(3):
-            image = cv2.resize(images[i], (640, 640))
-            results = self.score_frame(image)
-            image = self.plot_boxes(results, image)
-            cv2.imwrite(f"output_images/Mango Image {i}.png", image)
-        print("Process completed.")
-        # print("\n\nDetection started...")
-        # camera = cv2.VideoCapture(0)
-        # while (True):
-        #     time.sleep(10)
-        #     ret, frame = camera.read()
-        #     frame = cv2.resize(frame, (640, 640))
-        #     results = self.score_frame(frame)
-        #     frame = self.plot_boxes(results, frame)
-        #     cv2.imshow('Mango Detection and Classification', frame)
-        #     if cv2.waitKey(5) & 0xFF == 27:
-        #         break
-        # camera.release()
-        # cv2.destroyAllWindows()
-        # print("Process completed.")
+        pass

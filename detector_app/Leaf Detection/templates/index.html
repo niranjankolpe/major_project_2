@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: rgb(5, 32, 3);
+            /* background-image: url("woodenframeleaves.jpg"); */
+            background: linear-gradient(110deg, #1f6b15 60%, #045f19 60%);
+            /* background-size: cover; */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            background-color: rgb(140, 145, 140);
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 1em solid rgb(5, 32, 3);
+            padding: 40px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            color: rgb(1, 20, 7);
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: rgb(145, 218, 139);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        button {
+            background-color: rgb(5, 32, 3);
+            color: rgb(240, 241, 240);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #03fa34;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        p.instructions {
+            font-size: 1.2em;
+        }
+
+        p.accepted-formats {
+            font-size: 1em;
+        }
+    </style>
+    <title>Mango Disease Detection</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Mango Disease Detection</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".jpg, .png" required>
+        <button type="submit">Upload Image</button>
+        <p class="instructions">Click the button to upload an image for disease detection.</p>
+        <p class="accepted-formats">Accepted formats: .jpg, .png</p>
+    </form>
+    </div>
+</body>
+</html>
+
+

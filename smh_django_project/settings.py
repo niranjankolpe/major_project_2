@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'detector_app'
+    'detector_app',
+    'leaf_detection'
 ]
 
 MIDDLEWARE = [
@@ -119,7 +120,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'detector_app', 'detector_app_static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'detector_app', 'detector_app_static'),
+                    os.path.join(BASE_DIR, 'leaf_detection', 'leaf_detection_static')]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files_root')
 
