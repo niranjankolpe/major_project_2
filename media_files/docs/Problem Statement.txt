@@ -1,0 +1,2 @@
+Problem Statement: To develop a Computer Program able to identify real-time properties of a given alphanso mango to predict and suggest suitable harvesting measures for maxmimum profit.
+

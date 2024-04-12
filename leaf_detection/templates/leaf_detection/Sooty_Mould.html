@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sooty Mould</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <center>
+        <h1>SOOTY MOULD</h1>
+    </center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Management</p>
+            <ul>
+                <li>Management should be done for insects and sooty moulds simultaneously</li><br>
+                <li>Controlling of insect by spraying systemic insecticides like methyl dematon</li><br>
+                <li>After that spray starch solution(1 kg Starch/Maida in 5 liters of water. Boiled and dilute to 20
+                    liters)</li><br>
+                <li>Starch dries and forms flake which are removed along with the fungus</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <!-- <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Mark 10 trees per block of about 1 lima, or 10 trees out of 50 trees, and observe them weekly
+                        from
+                        flowering to harvest.
+                    </li><br>
+                    <li>Look for small, black sunken spots at leaf margins, flowers, and fruits. Spots later become
+                        large
+                        necrotic areas. Note
+                        that black large and small spots near or along the central vein of leaves, is not anthracnose.
+                    </li><br>
+                    <li>During susceptible stage of flowering and during rainy season, monitor twice a week.</li><br>
+                    <li>Consider action when 3 out of 10 trees have leaves showing signs of the disease.</li><br>
+                    <li>If the fruits show the disease, action is too late.</li><br>
+                </ul>
+
+            </div> -->
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                    <li>Identify and control the sap-sucking insects responsible for honeydew production. This may
+                        involve using
+                        insecticides or introducing natural predators that feed on these pests.<br>
+                        Choose an insecticide suitable for the target pests (aphids, scales, or whiteflies). Follow the
+                        manufacturer's
+                        instructions for dilution. Common insecticides include imidacloprid, neem oil, or horticultural
+                        oil.<br>
+                        Mix the insecticide according to the recommended concentration. For example, if the label
+                        recommends 5
+                        ml of insecticide per liter of water, mix accordingly.
+                    </li><br>
+                    <li>Neem oil is a natural product that can be effective in controlling both pests and sooty mold. It
+                        acts as a
+                        repellent, disrupts the feeding patterns of insects, and has antifungal properties.<br>
+                        Neem oil is effective against pests and has antifungal properties.<br>
+                        Mix neem oil at a rate of around 10 to 20 ml per liter of water, or as recommended on the
+                        product label.</li><br>
+                    <li>Adjust irrigation practices to minimize excess moisture on the leaves, as sooty mold tends to
+                        thrive in
+                        humid conditions. Watering early in the day allows foliage to dry before nightfall.
+                    </li><br>
+                    <li>Promote good cultural practices, such as proper spacing between trees, regular pruning, and
+                        adequate
+                        nutrition, to maintain plant health and reduce the likelihood of pest infestations.
+                    </li><br>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

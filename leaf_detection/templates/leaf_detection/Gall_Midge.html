@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gall midge</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <center>
+        <h1>GALL MIDGE</h1>
+    </center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Management</p>
+            <ul>
+                <li>The surviving stages of midges in fallen leaves should be collected and destroyed.</li><br>
+                <li>Hoeing should be done under the tree canopy of mango tree followed by irrigation to
+                    kill the pupating midges in soil.</li><br>
+                <li>After fruit harvesting pruning should be done properly and damaged branches are
+                    burned away from orchard.</li><br>
+                <li>Plastic sheet is used to break life cycle of midge under the plant canopy to cover soil. It
+                    prevents emergence of adult from soil and also prevent dropping larvae to go into soil
+                    for pupation that results population decreases.</li><br>
+                <li>Use of foliar application of 2 % Neem extract on affected mango trees</li><br>
+                <li>Soil treatments have also been used to kill carry over population of larvae in soil under
+                    mango trees, apply through drenching chlorpyrifos (e.g. Lorsben 500ml/100L water) OR
+                    apply fipronil (e.g. Regent/Refree 8 kg/acre) under the canopy of trees.</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Use of Traps: Some traps are specifically designed to attract and capture gall midges. These
+                        traps usually contain substances that mimic the scent of host plants, attracting the midges.
+                        Check the traps regularly for any captured insects.
+                    </li><br>
+                    <li>Sampling: Randomly collect samples of mango leaves from different parts of the tree and inspect
+                        them under a magnifying glass for the presence of gall midge larvae or eggs. This method helps
+                        in detecting infestations at an early stage.</li><br>
+                    <li>Integrated Pest Management (IPM): Implement an IPM approach, which combines various pest control
+                        methods, including cultural, biological, and chemical control strategies, to manage gall midge
+                        infestations effectively while minimizing environmental impact.</li><br>
+                    <li>Yellow Sticky Traps: Yellow sticky traps are particularly effective in capturing gall midges, as
+                        these insects are attracted to the color yellow. Hang yellow sticky traps in the mango orchard
+                        and check them periodically.</li><br>
+                </ul>
+
+            </div>
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                    <li>Sanitation: Keep the orchard clean by removing and destroying infested plant parts. This reduces
+                        the population of gall midges.</li><br>
+                    <li>Pruning: Prune affected branches to remove the galls and destroy them to prevent further spread.
+                    </li><br>
+                    <li>Crop Rotation: If possible, avoid planting mango trees in areas where gall midges have been a
+                        recurring problem.</li><br>
+                    <li>Predators and Parasitoids: Encourage natural enemies of gall midges, such as predatory insects
+                        and parasitic wasps, by maintaining a diverse ecosystem in the orchard. Avoid using
+                        broad-spectrum pesticides that may harm these beneficial insects.</li><br>
+                    <li>Insecticides: If cultural and biological control methods are insufficient, consider using
+                        insecticides as a last resort. Consult with local agricultural authorities or entomologists to
+                        determine the most effective and least harmful insecticides for controlling gall midges on mango
+                        trees. Follow all label instructions and safety precautions when applying pesticides.</li><br>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

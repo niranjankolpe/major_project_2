@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powdery Mildew</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <center>
+        <h1>POWDERY MILDEW</h1>
+    </center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Preventions</p>
+            <ul>
+                <li>Plant-resistant or tolerant varieties.</li><br>
+                <li>Plant at wider spacing from 8 x 8 m to 12 x 12m. If you plant at smaller distances, keep thinning
+                    until the standard spacing is reached.</li><br>
+                <li>Practice good orchard sanitation:</li><br>
+                <li>Prune tree branches to allow air circulation.</li><br>
+                <li>Pickup and destroy fallen leaves and flowers.</li><br>
+                <li>Remove tall weeds from orchards.</li><br>
+                <li>Fertilize the orchard properly (increased rates of N-P-K application decreases the incidence of
+                    powdery mildew). Avoid late-season applications of nitrogen fertilizer.</li><br>
+                <li>As the fungi is carried by the wind, intercropping with other fruit trees or forestry species
+                    reduces the spread of the disease.</li><br>
+                <li>In nurseries, avoid overhead watering to help reduce the relative humidity</li><br>
+                <li>Keep all equipment clean and dry to prevent spread of the fungus</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Before blossoming, observe 10 marked trees/ha in the orchard for symptoms each week</li><br>
+                    <li>Young tissues (flowers, leaves and young fruits) show small patches of white powdery mycelium
+                        which can later merge to cover large areas.</li><br>
+                    <li>Young infected leaves may become distorted, develop grey necrotic lesions
+                        on the upper side of the leaves and tend to curl downwards.
+                    </li><br>
+                    <li>If severe, the leaves may become brown, dry and fall.</li><br>
+                    <li>Inflorescences: fail to open and may drop from panicles, can become completely covered by the
+                        mildew and blacken or become brown and dry.</li><br>
+                    <li>Fruits: severe blossom infection can result in complete loss of fruit. The epidermis of the
+                        infected newly set fruit cracks and forms corky tissue. Entire fruit may become yellow and
+                        misshapen, covered in mildew and fall prematurely.</li><br>
+                    <li>Carefully monitor the flowers as they are susceptible to infection once they have begun to open
+                        on the panicles, 3-5 weeks after bud break. Monitor more </li><br>
+                    <li>frequently during favourable conditions, when
+                        temperatures are mild (23°C) and air is moist (as little as 20%).
+                    </li><br>
+                    <li>If 2-3 trees are infested (5-10% of leaves or flower bunches) out of 10 trees, then consider
+                        action.</li><br>
+                </ul>
+
+            </div>
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                    <li>Remove severely infected panicles and all infected plant parts, and burn or bury to at least 60
+                        cm deep. Do not compost infected plant debris.</li><br>
+                    <li>Spray infected shoots with a solution of: 6 spoons of baking powder, 3 spoons of white oil and
+                        white bar soap foam and mix with 15 litres of water.</li><br>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

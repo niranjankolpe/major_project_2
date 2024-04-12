@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cutting Weevil</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs{
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+            
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1{
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+    
+    <center><h1>CUTTING WEEVIL</h1></center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Preventions</p>
+            <ul>
+                <li>Sanitation: Remove and destroy any infected leaves or plant parts promptly. This helps prevent the spread of the disease to healthy parts of the tree.</li><br>
+                <li>Pruning: Trim and prune mango trees to improve air circulation and sunlight penetration. This can help reduce humidity levels and create an environment less favorable for the weevils.</li><br>
+                <li>Biological Control: Introduce natural predators of the weevil, such as parasitic wasps or predatory beetles, to help keep their populations in check.</li><br>
+                <li>Mulching: Applying mulch around the base of mango trees can help regulate soil moisture and temperature, which may indirectly reduce weevil populations by creating less favorable conditions for their development.</li><br>
+                <li>Crop Rotation: If possible, avoid planting mango trees in the same location where they were previously grown. This can help disrupt the life cycle of weevils and reduce the likelihood of reinfestation.</li><br>
+                <li>Botanical Extracts: Some botanical extracts, such as pyrethrum or rotenone, can be effective against weevils. Use them according to the instructions provided.</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Leaf Sampling: Take random samples of leaves from various parts of the mango tree and examine them closely for signs of weevil damage. Look for freshly cut edges or chewed areas.</li><br>
+                    <li>Sticky Traps: Place sticky traps around the mango trees to capture adult weevils. These traps can be placed on the trunk or hung from branches. Check the traps regularly and count the number of weevils caught.</li><br>
+                    <li>Phenology Monitoring: Monitor the phenological stages of mango trees, such as flowering and fruiting, as cutting weevils may be more active during certain stages of growth. Adjust monitoring efforts accordingly.</li><br>
+                    <li>eat Sheet Sampling: Use a beat sheet (a large white cloth or tray) placed beneath branches to dislodge and collect weevils and other insects hiding in the foliage. Shake the branches gently and examine the collected insects for cutting weevils.</li><br>
+                    <li>Trap Crops: Plant trap crops, such as certain varieties of plants that attract weevils, around mango orchards. Monitor these trap crops for signs of weevil activity, which can serve as an early warning system for infestations in mango trees.</li><br>
+                </ul>
+
+            </div>
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                   <li>Pruning:<br>Regularly prune affected branches to remove cutting weevil larvae and eggs.<br>Dispose of pruned material away from the tree to prevent reinfestation.
+                   </li><br>
+                   <li>Clean Surroundings:<br>Keep the area around the mango tree clean from fallen leaves and debris, as cutting weevils can hide in
+                    these materials.                </li><br>
+                   <li>Natural Predators:<br>Encourage natural predators of cutting weevils, such as birds and beneficial insects, by creating a
+                    biodiverse environment.</li><br>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

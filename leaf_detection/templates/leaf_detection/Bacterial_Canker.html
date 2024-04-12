@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bacterial Canker</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <center>
+        <h1>BACTERIAL CANKER</h1>
+    </center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Preventions</p>
+            <ul>
+                <li>Use healthy seedlings/grafting material from sources free from the disease</li><br>
+                <li>Avoid transport of infected material to areas free from the disease
+                </li><br>
+                <li>Prune and burn infected plant parts and old mango fruits and fruit stalk after harvest</li><br>
+                <li>Prune trees regularly to improve sunlight penetration and air movement by removing internal part of
+                    canopy and disease branches</li><br>
+                <li>Pruning equipment should surface sterilized with 5% bleach or sodium hypochlorite as pruners move
+                    from one trees to another</li><br>
+                <li>Avoid all cultivation activities when the trees are wet as the disease spreads more quickly when
+                    conditions are wet</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Monitor weekly for symptoms of the disease</li>
+                    <li>On leaves the infection starts as small brown oily spots that turn necrotic, black, angular raised spots sometimes surrounded by a yellow halo</li>
+                    <li>Branches, petioles and perduncles show cracks, raised spots and cankers. A sticky exudate (gum) exudes from the cankers mainly in the rainy season</li>
+                    <li>On fruits small black raised spots form often teardrop shaped. These spots enlarge, crack and sticky gum ooze from the cracks</li>
+                    <li>Act when the first symptoms are seen or copper fungicides can be used as a preventative measure</li>
+                    <li>Lesions of black spot are more angular and raised than anthracnose but very similar</li>
+                </ul>
+
+            </div>
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                    <li>Prune and burn all infected branches to reduce the spread of the disease</li>
+                    <li>Destroy infected fruit both on the tree and ground regulary to avoid spread</li>
+                    <li>Remove seriously disease trees, when cankers are present on the main trunk</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

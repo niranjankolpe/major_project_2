@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Back</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main {
+            display: flex;
+            text-align: justify;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            align-items: stretch;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: large;
+            line-height: 20px;
+
+        }
+
+        .heading_title {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            color: black;
+            margin-bottom: 30px;
+        }
+
+
+        /* .right{
+            display: flex;
+            flex-direction: column;
+        }*/
+
+        .left,
+        .right {
+            position: relative;
+            top: 0%;
+            width: 50%;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 50px;
+        }
+
+        .right,
+        .left,
+        .monitoring,
+        .direct_control {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        h1 {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <center>
+        <h1>DIE BACK</h1>
+    </center>
+    <div class="main">
+        <div class="left">
+            <p class="heading_title">Management</p>
+            <ul>
+                <li>Avoid mechanical injuries to the plants.</li>
+                <li>Prevent termites and longicorn beetles causing damage to the plants.</li><br>
+                <li>Reduce plant stress, including stress caused by drought and nutritional deficiencies</li><br>
+                <li>Reduce sunburn of the trunk and branches when severely pruning the trees.</li><br>
+                <li>Prune dying branches by cutting the branch back to below the edge of the dead or symptomatic areas.
+                    Disinfect the pruning tool after each plant. Remove the symptomatic pruned branches from the
+                    orchard.</li><br>
+                <li>Avoid pruning mango trees when the canopy is wet or during rainfall</li><br>
+                <li>Follow the ‘come clean go clean’ practices, and make sure to clean and disinfect any tree pruning
+                    machinery when moving it between farms.</li><br>
+                <li>Although mango mulch is an important source of nutrients, removal of under tree mango mulch/litter
+                    in orchards with high disease load may be beneficial as it is a potential source of inoculum.</li>
+                <br>
+                <li>There is no fungicide currently registered in Australia to control mango common dieback.</li><br>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="monitoring">
+                <p class="heading_title">Monitoring</p>
+                <ul>
+                    <li>Regular Inspections: Conduct routine inspections of your mango trees to look for any signs of
+                        dieback. Check for wilting leaves, dead or dying branches, and overall poor health of the tree.
+                    </li><br>
+                    <li>Identify the Cause: Determine the underlying cause of dieback. This could include fungal
+                        infections like anthracnose or powdery mildew, nutrient deficiencies (such as potassium or
+                        magnesium), water stress, root rot, or insect infestations. </li><br>
+                    <li>Soil and Tissue Testing: Conduct soil tests to assess nutrient levels and pH. Also, consider
+                        leaf tissue analysis to identify any specific nutrient deficiencies. Correct any imbalances
+                        through appropriate fertilization.</li><br>
+                    <li>Proper Irrigation: Ensure your mango trees receive adequate water, especially during dry
+                        periods. However, avoid overwatering, as waterlogged soil can lead to root rot and exacerbate
+                        dieback.</li><br>
+                    <li>Fungicide Treatments: If fungal infections are identified as the cause of dieback, apply
+                        appropriate fungicides according to label instructions. Copper-based fungicides are commonly
+                        used to control fungal diseases in mango trees</li><br>
+                    <li>Pest Management: Implement pest control measures to prevent insect infestations, which can
+                        weaken the tree and make it more susceptible to diseases like dieback.</li><br>
+                </ul>
+
+            </div>
+            <div class="direct_control">
+                <p class="heading_title">Direct Control</p>
+                <ul>
+                    <li>Pruning: Remove and dispose of dead or infected branches to prevent the spread of disease.</li>
+                    <br>
+                    <li>Watering: Ensure proper watering to avoid water stress. Use a drip irrigation system to keep the
+                        soil
+                        consistently moist but not waterlogged.</li><br>
+                    <li>Mulching: Apply organic mulch around the base of the tree to retain moisture and regulate soil
+                        temperature.</li><br>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -12,7 +12,10 @@ class MangoDetection:
         self.semi_ripe  = [[25, 211, 127], [30, 255, 255]]
         self.ripe       = [[16, 195, 137], [27, 255, 255]]
         self.kernel = np.ones((5,5))
+
+        # Loading the actual Machine Learning model file.
         self.model = torch.hub.load('ultralytics/yolov5', 'custom', path="media_files/models/model.pt", force_reload=False)
+        
         self.classes = self.model.names
         self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         print("Using Device: ", self.device)
@@ -60,7 +63,7 @@ class MangoDetection:
         # Real-time detection
         camera = cv2.VideoCapture(0)
         while (True):
-            time.sleep(10)
+            time.sleep(3)
             ret, frame = camera.read()
             frame = cv2.resize(frame, (640, 640))
             results = self.score_frame(frame)

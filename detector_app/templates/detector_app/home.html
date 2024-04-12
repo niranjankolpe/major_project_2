@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="{{media_url}}images/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero_video {
+            width: 100%;
+        }
+
+        .logo {
+            height: 80px;
+            width: 80px;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: height 0.3s ease;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .logo,
+        .tab1,
+        .tab2,
+        .tab3,
+        .about_img {
+            border-width: 0;
+            filter: drop-shadow(0 0 0.2rem rgb(0, 0, 0));
+        }
+
+        nav>a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 2rem;
+        }
+
+
+        .about_div {
+            /* position: absolute; */
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100vh;
+            width: 100%;
+            padding-bottom: 200px;
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        }
+
+        .services_div {
+            /* position: absolute; */
+            position: relative;
+            margin-top: auto;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+        }
+
+        .Heading_text {
+            text-align: center;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: xx-large;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+        .Heading_text2 {
+            text-align: center;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: x-large;
+            padding-top: 0px;
+        }
+
+        .tab1 {
+            height: 30px;
+            width: 90px;
+        }
+
+        .tab2 {
+            height: 30px;
+            width: 110px;
+        }
+
+        .tab3 {
+            height: 30px;
+            width: 120px;
+        }
+
+        .square {
+            max-width: 300px;
+            min-height: 200px;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 90%;
+            height: 500px;
+            padding: 35px;
+            border: 1px solid #f5f7fa25;
+            border-radius: 20px;
+            background-color: #ffffffb8;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(15px);
+            margin-left: auto;
+            margin-right: auto;
+            /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+        }
+
+        .about_img {
+            height: 300px;
+            width: 500px;
+            position: absolute;
+            right: 40px;
+            animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            top: 90px;
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .card {
+            min-height: 200px;
+            margin-left: 5%;
+            width: 400px;
+            height: 500px;
+            padding: 35px;
+            border: 1px solid #f5f7fa25;
+            border-radius: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInAnimation2 linear 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes fadeInAnimation2 {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .card_info {
+            height: 300px;
+            width: 300px;
+            background-color: aliceblue;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+
+            img {
+                height: 300px;
+                width: 300px;
+            }
+        }
+
+        .service_btn {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: larger;
+            padding: 12px;
+            border-radius: 40px;
+            width: max-content;
+            background-color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .service_btn:hover {
+            color: rgb(255, 255, 255);
+            background-color: black;
+        }
+
+        .about_para{
+            text-align: justify;
+            line-height: 2rem;
+            width:53%;
+            margin: auto 0;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: medium;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home"><img class="logo" src="{{media_url}}images/logo.png" alt="img"></a>
+        <div class="tabs">
+            <a href="home"><img class="tab1" src="{{media_url}}images/home.png" alt="img"></a>
+            <a href="#about"><img class="tab2" src="{{media_url}}images/about-us.png" alt="img"></a>
+            <a href="#services"><img class="tab3" src="{{media_url}}images/our-services.png" alt="img"></a>
+        </div>
+    </nav>
+
+    <div class="videodiv">
+        <video class="hero_video" src="{{media_url}}videos/mango_hero2.mp4" autoPlay muted loop></video>
+    </div>
+
+    <div id="about" class="about_div">
+        
+        <p class="Heading_text">ABOUT US</p>
+        <div class="square">
+            <img class="about_img" src="{{media_url}}images/about.jpg" alt="img">
+            <p class="about_para">Welcome to our Smart Mango Farming project! We're committed to
+                revolutionizing mango cultivation through innovative technology. With expertise in both agriculture and
+                cutting-edge technology, we've developed solutions for real-time ripeness detection and leaf disease
+                prediction using machine learning algorithms. Our project aims to empower mango farmers with tools to
+                optimize harvest timing and anticipate and mitigate disease outbreaks, ultimately improving yield
+                quality and quantity. Join us in harnessing the power of data-driven insights and advanced technology to
+                cultivate smarter, more sustainable mango farms. Together, we're shaping the future of mango farming for
+                the better.</p>
+        </div>
+
+    </div>
+
+    <div id="services" class="services_div">
+        <p class="Heading_text">OUR SERVICES</p>
+        <div class="cards">
+            <div class="card">
+                <p class="Heading_text2">Mango Classifier</p>
+                <div class="card_info"><img src="{{media_url}}images/classified_ripe_mango.png" alt="card img"></div><br>
+                <center><a href="detector" class="service_btn">Read More</a></center>
+            </div>
+            <div class="card">
+                <p class="Heading_text2">Disease Detector</p>
+                <div class="card_info"><img src="{{media_url}}images/disease_detection_img.jpg" alt="card img"></div><br>
+                <center><a href="leaf_classifier_home" class="service_btn">Read More</a></center>
+            </div>
+            <div class="card">
+                <p class="Heading_text2">Homemade Remedies</p>
+                <div class="card_info"><img src="{{media_url}}images/remedies_img.png" alt="card img"></div><br>
+                <center><a href="homemade_remedies" class="service_btn">Read More</a></center>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+</body>
+</html>

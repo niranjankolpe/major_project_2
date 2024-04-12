@@ -17,18 +17,16 @@ def index(request):
     return redirect("home")
 
 def home(request):
-    read_text = ""
-    # with open("media_files/models/sample_text_model.txt", "r") as model:
-    #     read_text = " ".join(model.readlines())
-    context = {'media_url': settings.MEDIA_URL, 'read_text': read_text}
-    return render(request, "detector_app/index.html", context)
+    context = {'media_url': settings.MEDIA_URL}
+    return render(request, "detector_app/home.html", context)
 
 def detector(request):
     context = {'media_url': settings.MEDIA_URL}
-    return render(request, "detector_app/detector.html", context)
+    return render(request, "detector_app/mango_classifier.html", context)
 
-def single_mango_image(request):
-    return render(request, "detector_app/single_mango_image.html")
+def homemade_remedies(request):
+    context = {'media_url': settings.MEDIA_URL}
+    return render(request, "detector_app/homemade_remedies.html", context)
 
 def image_classify(request):
     predicted_class = ""
@@ -57,7 +55,7 @@ def image_classify(request):
     else:
         return redirect("home")
     context = {'predicted_class': predicted_class, 'media_url': settings.MEDIA_URL}
-    return render(request, "detector_app/index.html", context)
+    return render(request, "detector_app/home.html", context)
 
 def start_detection(request):
     detector = MangoDetection()
